@@ -20,7 +20,7 @@ export class FormsSigninComponent {
 
   createUser(){
 
-   this.customerService.addUser(this.customer).subscribe(res => {
+   this.customerService.saveCustomer(this.customer).subscribe(res => {
     console.log(res);
    });
     // tự print

@@ -104,7 +104,7 @@ export class CustomerInfoComponent implements OnInit {
   }
 
   btnLogin() {
-    this.customerService.getUser(this.username, this.password).subscribe(
+    this.customerService.loginCustomer(this.username, this.password).subscribe(
       (res) => {
         console.log(res);
         this.customerInfo = res;

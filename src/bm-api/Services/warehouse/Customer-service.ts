@@ -9,11 +9,11 @@ import {Injectable} from "@angular/core";
 export class CustomerService extends warehouseBaseService{
 
 
-  public addUser(customerUser:any): Observable<any> {
+  public saveCustomer(customerUser:any): Observable<any> {
       return this.post('/api/v1/Customer/create', customerUser);
   }
 
-  public getUser(username: String, password: String){
+  public loginCustomer(username: String, password: String){
     const body = {username, password};
     return this.post("/api/v1/Customer/login", body);
   }

@@ -27,7 +27,7 @@ export class FormsLoginComponent{
     //Reset account truoc khi dang nhap
     localStorage.removeItem('customer');
 
-    this.customerService.getUser(this.username, this.password).subscribe(
+    this.customerService.loginCustomer(this.username, this.password).subscribe(
       (res) => {
         console.log(res);
         this.customerInfo = res;
